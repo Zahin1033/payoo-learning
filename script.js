@@ -1,6 +1,6 @@
 // login button fuctionality
 
-document.getElementById("loginButton").addEventListener("click",function(e){
+document.getElementById("loginButton").addEventListener("click", function (e) {
     e.preventDefault()
     console.log("login button click")
     console.log(e)
@@ -10,8 +10,13 @@ document.getElementById("loginButton").addEventListener("click",function(e){
     const mobileNumberValueConverted = parseInt(mobileNumberValue)
     const pinNumberValue = document.getElementById("pin-number").value
     const pinNumberValueConverted = parseInt(pinNumberValue)
-     
-    console.log(mobileNumberValueConverted,pinNumberValueConverted)
 
-    if()
+    console.log(mobileNumberValueConverted, pinNumberValueConverted)
+
+    if (mobileNumberValueConverted === mobileNumber && pinNumberValueConverted === pinNumber) {
+        window.location.href="./home.html"
+     }
+    else{
+        alert("Invalid credentials")
+    }
 })
