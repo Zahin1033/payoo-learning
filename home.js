@@ -31,7 +31,11 @@ document.getElementById("add-money-btn").addEventListener("click", function (e) 
 document.getElementById("withdraw-btn").addEventListener("click", function (e) {
     e.preventDefault()
     
-    const amount = document.getElementById("")
+    const amount = parseInt(document.getElementById("withdraw-amount").value)
+    const availableBalance = parseInt(document.getElementById("available-balance").innerText)
+  
+    const totalNewAvailableBalance = availableBalance - amount
+    document.getElementById("available-balance").innerText = totalNewAvailableBalance
 })
 
 
